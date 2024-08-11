@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Entry by codeSith</title>
+
+</head>
+<style>
+    *{
+        margin:0;
+        padding:0;
+        
+    }
+    body{
+        background: linear-gradient(to bottom,#1b5253, #33ccff 70%,#feb47b 86%);
+        height:100vh;
+       
+    }
+
+    table{
+        margin:30px 520px;
+        padding:50px;
+        border: 0px inset red;
+  border-radius: 5px;
+    }
+   
+    h1 {
+            font-size: 48px;
+            font-weight: bold;
+            background: linear-gradient(to right,#fddf2d,#fddf2d,  #ff99cc,#a1783f,#fd1d1d,#feb47b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text; /* For non-WebKit browsers */
+            color: transparent; /* Fallback for other browsers */
+            text-align: center;
+            font-size: 130px;
+        
+        }
+    table td{
+        text-align: left;
+        padding:10px;
+    }
+    input{
+        padding:10px 40px;
+    }
+    label{
+        font-size: 30px;
+        color:white;
+    }
+    .button {
+  background-color: #04AA6D; /* Green */
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 20%;
+  margin: 30px 20px;
+  font-size: 30px;
+}
+.button:hover {
+  background-color: whitesmoke;
+  color:black;
+  transform: 50%;
+}
+img{
+    float:left;
+    width: 400px;
+    height: 400px;
+}
+ .mg{
+    float:right;
+ }      
+       
+    
+
+</style>
+<body>
+    <h1>Car parking system!</h1>
+   
+    <div class="form">
+    <table >
+    <form
+    id = "form"
+        method = "POST"
+    >
+    <!-- action= will be set by javascript -->
+        <tr><div>
+            <td><label for="name">Name</label></td>
+            <td><input
+                type="text"
+                
+                id="name"
+                name="Name"
+                list="names"
+            /></td>
+            
+        </div></tr>
+        <tr><div >
+            <td> <label for="phone">Phone:</label></td>
+            <td> <input
+                type="text"
+                
+                id="phone"
+                name="Phone"
+                list="phones"
+            /></td>
+           
+        </div></tr>
+        <tr><div >
+            <td><label for="email">Email</label>:</label></td>
+            <td><input
+                type="text"
+                
+                id="email"
+                name="Email"
+                list="emails"
+            /></td>
+            
+        </div></tr>
+        <tr><div >
+            <td> <label for="Password">Password</label>:</label></td>
+            <td><input
+                type="text"
+                id="Password"
+                name="Password"
+                list="passwords"
+            /></td>
+            
+        </div></tr>
+       
+        <tr><th colspan="2"><button type="submit" class="button">Submit</button></th></tr>
+    </form>
+</table>
+</div>
+
+
+    <script>
+        const url = "https://script.google.com/macros/s/AKfycbxlYExriIgLDxKHVq7IU_Yiz08ZD2cyawzd0eqowIoR/dev" // enter your public ('access' - 'anyone') deployment URL (NOT test deployment!)
+        document.getElementById('form').action = url;
+
+        // fetching the data from each column in the sheet
+        // then populating the respective datalist
+        // fetch(`${url}?header=Name`)
+        //     .then((response) => response.json())
+        //     .then(({ data }) => {
+        //         console.log(data);
+        //         populateDatalists("names", data)
+        //     })
+        //     .catch((error) => console.error('!!!!!!!!', error));
+
+        // fetch(`${url}?header=Phone`)
+        //     .then((response) => response.json())
+        //     .then(({ data }) => {
+        //         console.log(data);
+        //         populateDatalists("phones", data)
+        //     })
+        //     .catch((error) => console.error('!!!!!!!!', error));
+        
+        // fetch(`${url}?header=Email`)
+        //     .then((response) => response.json())
+        //     .then(({ data }) => {
+        //         console.log(data);
+        //         populateDatalists("emails", data)
+        //     })
+        //     .catch((error) => console.error('!!!!!!!!', error));
+        // fetch(`${url}?header=`)
+        //     .then((response) => response.json())
+        //     .then(({ data }) => {
+        //         console.log(data);
+        //         populateDatalists("passwords", 123)
+        //     })
+        //     .catch((error) => console.error('!!!!!!!!', error));
+
+
+        // function to add options to datalists
+        // const populateDatalists = (id, arr) => {
+        //     let result = '';
+        //     for (const item of arr) {
+        //         result += `<option value="${item}">`;
+        //     }
+        //     document.getElementById(id).innerHTML = result;
+        // }
+    </script>
+</body>
+</html>
